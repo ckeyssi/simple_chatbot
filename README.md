@@ -1,5 +1,6 @@
 ## Installation
 
+Tanto para bff y front. Posicionarse en la raíz de cada uno antes de comenzar la instalación.
 ```bash
 $ npm install
 ```
