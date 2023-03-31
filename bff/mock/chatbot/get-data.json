@@ -1,0 +1,53 @@
+[{
+  "steps":[
+      {
+        "id": "Simple ChatBot!",
+        "message": "Hola soy Key, tu asistente virtual",
+        "trigger": "Ask name"
+      },
+      {
+        "id": "Ask name",
+        "message": "¿Cúal es tu nombre?",
+        "trigger": "waiting1"
+      },
+      {
+        "id": "waiting1",
+        "user": true,
+        "trigger": "Name"
+      },
+      {
+        "id": "Name",
+        "message": "Hola {previousValue}, un gusto hablar con vos! con cúal de estos tópicos te puedo ayudar?",
+        "trigger": "issues"
+      },
+      {
+        "id": "issues",
+        "options": [
+          {
+            "value": "Cryptocurrency",
+            "label": "Cryptocurrency",
+            "trigger": "Cryptocurrency"
+          },
+          { "value": "Bitcoin", "label": "Bitcoin", "trigger": "Bitcoin" }
+      ]
+      },
+      {
+        "id": "Cryptocurrency",
+        "message":
+          "Cryptocurrency is a digital asset designed to work as a medium of exchange. The database uses strong cryptography to secure transaction records. Cryptocurrency does not exist in physical world and It is not issued by a central authority, so It is different from central banking systems.",
+        "trigger": "final"
+      },
+      {
+        "id": "Bitcoin",
+        "message":
+          "Bitcoin is a decentralized digital currency without a central bank or single administrator. Transactions are verified by network nodes through cryptography and recorded in a public distributed ledger called a blockchain. Bitcoins are created as a reward for a process known as mining. They can be exchanged for other currencies, products, and services.",
+          "trigger": "final"
+      },
+      {
+          "id": "final",
+          "message":
+            "Ok, ahora un especialista se comunicará con vos, gracias. espero haber sido de ayuda, hasta pronto",
+          "end": true
+      }
+    ]
+  }]
